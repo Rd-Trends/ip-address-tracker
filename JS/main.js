@@ -42,6 +42,8 @@ const showMap = (lat, lng) => {
   });
 
   L.marker([lat, lng], { icon: locationIcon }).addTo(map);
+
+  return map;
 };
 
 const getLocationUsingIpAddress = async () => {
