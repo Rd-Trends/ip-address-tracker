@@ -69,4 +69,4 @@ const getLocationUsingIpAddress = async () => {
 
 // eventListeners
 submitBtn.addEventListener("click", searchIpAddress);
-// getLocationUsingIpAddress();
+getLocationUsingIpAddress();
