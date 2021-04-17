@@ -6,6 +6,7 @@ const displayIpAddress = document.getElementById("ipaddress");
 const displayLocation = document.getElementById("location");
 const displayTimezone = document.getElementById("timezone");
 const displayIsp = document.getElementById("isp");
+const mapContainer = document.getElementById("mapcontainer");
 
 const searchIpAddress = (e) => {
   e.preventDefault();
@@ -45,6 +46,7 @@ const showMap = (lat, lng) => {
 };
 
 const getLocationUsingIpAddress = async () => {
+  mapContainer.innerHTML = `<div id="map"></div>`;
   const res = await fetch(
     `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ipAddress}`
   );
@@ -69,4 +71,5 @@ const getLocationUsingIpAddress = async () => {
 
 // eventListeners
 submitBtn.addEventListener("click", searchIpAddress);
+
 getLocationUsingIpAddress();
