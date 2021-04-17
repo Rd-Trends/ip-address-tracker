@@ -38,7 +38,7 @@ const showMap = (lat, lng) => {
   ).addTo(map);
 
   var locationIcon = L.icon({
-    iconUrl: "../images/icon-location.svg",
+    iconUrl: "./images/icon-location.svg",
     iconSize: [40, 50], // size of the icon
   });
 
