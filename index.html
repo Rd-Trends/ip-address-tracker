@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- leaflet css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- leaflet js -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="header">
+      <h1>IP Address Tracker</h1>
+      <form>
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <button type="submit">
+          <img src="./images/icon-arrow.svg" alt="" />
+        </button>
+      </form>
+    </div>
+
+    <div class="display-searched-data">
+      <span class="data">
+        <p>IP Address</p>
+        <p class="details" id="ipaddress"></p>
+      </span>
+      <span class="data">
+        <p>Location</p>
+        <p class="details" id="location"></p>
+      </span>
+      <span class="data">
+        <p>Timezone</p>
+        <p class="details" id="timezone"></p>
+      </span>
+      <span class="data">
+        <p>ISP</p>
+        <p class="details" id="isp"></p>
+      </span>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- add offset value dynamically using the API -->
+
+    <div class="attribution">
+      <p>Coded with <span>❤</span> &copy; Rd_Tech</p>
+    </div>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
